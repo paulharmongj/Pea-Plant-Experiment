@@ -126,6 +126,17 @@ Previous research has been done on the effect of different types of watering sub
 
 \subsection{Data}
 
+\subsection{Statistical Model}
+In order to analyze these data, we proposed an analysis that considers the effects of the covariates, as well as the block and cup effects modeled as random effects. Thus our proposed model is: 
+\begin{equation*}
+Y_{ijkl} = \mu + \alpha_i + \beta_j + Block_j + \alpha\beta_{ij}+ Cup_{kj} + \epsilon_{ijkl}
+\end{equation*}
+
+In the model, the response Y refers to the mean height, in millimeters, of the lth pea plant in the kth cup in the jth block. The overall mean height is $\mu$, the effect of Diet Coke type is $\alpha$, and the effect of fertilizer is $\beta$. We also consider their interaction. The random effects of Cup and Block are also considered in the model, and we make the assumptions that independent random errors are distributed as such: $\epsilon \sim N(0,\sigma^2_{error})$, $Block \sim N(0,\sigma^2_{block})$, and $Cup \sim N(0,\sigma^2_{cup})$. 
+
+
+
+
 
 \section{Results and Analysis}
 \subsection{Exploratory Analysis}
@@ -141,7 +152,8 @@ Previous research has been done on the effect of different types of watering sub
 
 
 \subsection{Germination Rates}
-Before we could do any statistical analysis of the pea plants, we had to determine that the treatment was not related to the germination probability for a given plant. Overall, 14 of the 82 (15 percent) of the pea plants failed to germinate. 
+Before we could do any statistical analysis of the pea plants, we had to determine that the treatment was not related to the germination probability for a given plant. Overall, 14 of the 82 (15 percent) of the pea plants failed to germinate. Figure X below shows the germination rates by each treament combination - there does not appear to be a large, systematic difference between the treatment combinations in terms of germination rates. 
+
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
 \includegraphics[width=\maxwidth]{figure/germination_rates-1} \caption[Germination rates by treatment group]{Germination rates by treatment group.}\label{fig:germination_rates}
@@ -150,25 +162,78 @@ Before we could do any statistical analysis of the pea plants, we had to determi
 
 \end{knitrout}
 
-Since we did not find strong evidence supporting a relationship between germination probability and treatment, we treated the non-germinated plants as unobserved data in the analysis. 
+A Chi-squared test of independence between the treatment groups and whether or not the plants germinated found no evidence that germination depended on treatment.  Since we did not find strong evidence supporting a relationship between germination probability and treatment, we treated the non-germinated plants as unobserved data in the analysis. 
 
 
 
 \subsection{Regression Results}
 
+The results of the ANOVA are given below. Type II Sums of Squares were compared since the sample sizes within each treatment group were not even. The ANOVA table is given below for the fixed effects. The results are clear; the majority of variation in plant heights is driven by the watering treatment rather than by the presence of plant food.  The model finds strong evidence of height differences by Diet Coke treatment, based on a Wald chi-squared test with test statistic 31.42 on 2 degrees of freedom (with associated p-value < 0.0001). There was not strong evidence of a difference in plant heights by presence/absence of plant food nor was there evidence that the effect of watering substance differed depending on plant food treatment. 
+
+% latex table generated in R 3.4.3 by xtable 1.8-2 package
+% Fri Apr 20 15:40:25 2018
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrr}
+  \hline
+ & Chisq & Df & Pr($>$Chisq) \\ 
+  \hline
+TrtCoke & 31.43 & 2 & 0.0000 \\ 
+  PF & 0.13 & 1 & 0.7134 \\ 
+  TrtCoke:PF & 1.40 & 2 & 0.4969 \\ 
+   \hline
+\end{tabular}
+\end{table}
+ 
+
+We also include effects plots (Fox, 2003) to describe the predicted means with associated uncertainty by treamtent group. The effects plots are included in Figure X. In the left panel, the predicted heights by watering treatment are given for plants that were treated with plant food. The right panel shows the predicted plant heights for those that were untreated by plant food. In both groups, the predicted heights for plants treated either with Diet Coke or diluted Diet Coke are at least 10 mm larger than for those treated with water. Even accounting for uncertainty in estimates, the confidence intervals for the Diet Coke treated plants are larger than for those that were treated with water only.  
+
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
+\hlstd{pea}\hlopt{$}\hlstd{Cup_Rand} \hlkwb{<-} \hlkwd{interaction}\hlstd{(pea}\hlopt{$}\hlstd{Cup,pea}\hlopt{$}\hlstd{TrtCoke,pea}\hlopt{$}\hlstd{PF)}
 \hlstd{lmer2} \hlkwb{<-} \hlkwd{lmer}\hlstd{(Height} \hlopt{~} \hlstd{TrtCoke} \hlopt{*} \hlstd{PF} \hlopt{+} \hlstd{(}\hlnum{1}\hlopt{|}\hlstd{Block)} \hlopt{+} \hlstd{(}\hlnum{1}\hlopt{|}\hlstd{Cup_Rand),} \hlkwc{data} \hlstd{= pea)}
-\end{alltt}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in lmer(Height \textasciitilde{} TrtCoke * PF + (1 | Block) + (1 | Cup\_Rand), data = pea): could not find function "{}lmer"{}}}\begin{alltt}
 \hlkwd{summary}\hlstd{(lmer2)}
 \end{alltt}
-
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in summary(lmer2): object 'lmer2' not found}}\begin{alltt}
+\begin{verbatim}
+## Linear mixed model fit by REML t-tests use Satterthwaite approximations
+##   to degrees of freedom [lmerMod]
+## Formula: Height ~ TrtCoke * PF + (1 | Block) + (1 | Cup_Rand)
+##    Data: pea
+## 
+## REML criterion at convergence: 707.3
+## 
+## Scaled residuals: 
+##     Min      1Q  Median      3Q     Max 
+## -2.4545 -0.6629  0.2358  0.7511  1.6912 
+## 
+## Random effects:
+##  Groups   Name        Variance Std.Dev.
+##  Cup_Rand (Intercept)   6.8157  2.6107 
+##  Block    (Intercept)   0.5947  0.7712 
+##  Residual             122.7059 11.0773 
+## Number of obs: 96, groups:  Cup_Rand, 12; Block, 2
+## 
+## Fixed effects:
+##                Estimate Std. Error     df t value Pr(>|t|)    
+## (Intercept)      22.656      3.373  5.637   6.718 0.000685 ***
+## TrtCokew         -9.781      4.707  6.000  -2.078 0.082951 .  
+## TrtCokewdc        3.719      4.707  6.000   0.790 0.459558    
+## PFn               1.156      4.707  6.000   0.246 0.814136    
+## TrtCokew:PFn     -1.094      6.656  6.000  -0.164 0.874879    
+## TrtCokewdc:PFn   -2.531      6.656  6.000  -0.380 0.716842    
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Correlation of Fixed Effects:
+##             (Intr) TrtCokw TrtCkwd PFn    TrtCkw:PFn
+## TrtCokew    -0.698                                  
+## TrtCokewdc  -0.698  0.500                           
+## PFn         -0.698  0.500   0.500                   
+## TrtCokw:PFn  0.493 -0.707  -0.354  -0.707           
+## TrtCkwdc:PF  0.493 -0.354  -0.707  -0.707  0.500
+\end{verbatim}
+\begin{alltt}
 \hlkwd{Anova}\hlstd{(lmer2,} \hlkwc{type} \hlstd{=} \hlstr{"II"}\hlstd{)}
 \end{alltt}
 
@@ -176,18 +241,44 @@ Since we did not find strong evidence supporting a relationship between germinat
 {\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in Anova(lmer2, type = "{}II"{}): could not find function "{}Anova"{}}}\begin{alltt}
 \hlkwd{plot}\hlstd{(}\hlkwd{allEffects}\hlstd{(lmer2))}
 \end{alltt}
+\end{kframe}
+\includegraphics[width=\maxwidth]{figure/unnamed-chunk-1-1} 
 
-
-{\ttfamily\noindent\bfseries\color{errorcolor}{\#\# Error in allEffects(lmer2): object 'lmer2' not found}}\end{kframe}
 \end{knitrout}
 
+
+\subsection{Tukey Pairwise Comparisons}
+
+Tukey Honest Significant Differences were calculated for the pairwise comparisons between the treatment combinations. A compact letter display is given in Table X, with rankings by watering type averaged over the plant food factor. The rankings are such that rank 1 refers to the largest plant heights and rank 2 refers to the smallest plant heights.  The Tukey pairwise comparisons identify the Diet Coke and diluted Diet Coke treatments as having indisttinguishable mean plant heights, and the tap water treatment to be associated with smaller plant heights. 
+
+% CLD table
+\begin{table}[ht]
+\centering
+\begin{tabular}{lrrr}
+  \hline
+ & Diet Coke & Diluted Diet Coke & Water \\ 
+  \hline
+Ranking & 1 & 2 & 1 \\ 
+  
+   \hline
+\end{tabular}
+\end{table}
 
 
 \section{Discussion}
 
+\subsection{Conclusions}
+This project illuminates some particularly interesting results. When we first started this analysis, we expected that the addition of Diet Coke to the watering regime of the pea plants would either harm or cause no benefit to the pea plants. This does not appear to be the case. Rather, the pea plants that were treated with either pure Diet Coke or Diet Coke dilution tended to grow at a more rapid rate than did those treated with just water. 
+
+This may be reflective of the hardiness of alaskan pea plants in general. Or, it may be that the additional ingredients in the Diet Coke did not substantially harm the pea plants in the short term. 
+
+\subsection{Limitations of the Study}
+
+The alaska pea plants obtained from the study were purchased at Wal Mart. Because of proprietary differences in genetically-modified seeds, it is possible that these seeds differ from seeds sold by other companies. We do, however, assume that pea seeds within the company are randomly distributed. We randomly selected from the population of seeds that we purchased.  Treatments were randomly assigned to pea seeds. Therefore, we can make causal inference that among the 
 
 
 
+\subsection{Future Work}
 
 
 \end{document}
