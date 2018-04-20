@@ -147,6 +147,10 @@ This may be reflective of the hardiness of alaskan pea plants in general. Or, it
 
 \subsection{Limitations of the Study}
 
+The alaska pea plants obtained from the study were purchased at Wal Mart. Because of proprietary differences in genetically-modified seeds, it is possible that these seeds differ from seeds sold by other companies. We do, however, assume that pea seeds within the company are randomly distributed. We randomly selected from the population of seeds that we purchased.  Treatments were randomly assigned to pea seeds. Therefore, we can make causal inference that among the 
+
+
+
 \subsection{Future Work}
 
 
