@@ -78,14 +78,19 @@ AIC(m4)
 #model with cups as a random effect
 library(lme4);library(lmerTest)
 pea$Cup_Rand <- interaction(pea$Cup,pea$TrtCoke,pea$PF)
+
+
+
 lmer1 <- lmer(Height ~ TrtCoke * PF * Block + (1|Cup_Rand), data = pea )
 summary(lmer1)
 Anova(lmer1, type = "II")
 
-#fit additive model
-lmer2 <- lmer(Height ~ TrtCoke * PF + Block + (1|Cup_Rand), data = pea)
+#fit additive model with interactions between 
+lmer2 <- lmer(Height ~ TrtCoke * PF + (1|Block) + (1|Cup_Rand), data = pea)
 summary(lmer2)
 Anova(lmer2, type = "II")
+plot(allEffects(lmer2))
+##################################this is the model that we chose 
 
 
 #fit main effects additive
@@ -99,6 +104,9 @@ plot(allEffects(lmer3))
 library(nlme)
 lme.1 <- lme(Height ~ TrtCoke + PF + Block, random = ~1|Cup_Rand, data = pea)
 
+library(multcomp)
+q <- glht(lmer2, linfct = mcp(TrtCoke = "Tukey"))
+cld(q)
 
 
 ####WE could instead average over the cups ###
