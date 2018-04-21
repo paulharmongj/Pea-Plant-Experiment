@@ -12,7 +12,22 @@ pea$PF <- factor(pea$PF)
 pea$Block <- factor(pea$Block)
 @ 
 
+<<reformat_data, include = FALSE>>= 
+# Reformats the data set "pea" such that there are 4 blocking factors and an individual cup factor for the replicates
+Block <- as.factor(rep(c(1, 2, 3, 4), each = 24))
+Cup <- as.factor(rep(1:24, each = 4))
+pea2 <- cbind(block, cup, pea[, 3:6])
+# Create one random effect combination of block and cup
+RE <- interaction(Block, Cup, sep = ":")
+pea2$RE <- RE
 
+# Some analyses on the newly formated data
+aov1 <- aov(Height ~ TrtCoke*PF + Error(RE), data = pea2)
+summary(aov1)
+
+# Results stayed the same excep the F stat wasn't as large for the trt coke
+# We can discuss inclusion of this or not later
+@ 
 
 %%
 \documentclass[1p,12pt]{elsarticle}
