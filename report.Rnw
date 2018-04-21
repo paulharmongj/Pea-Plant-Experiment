@@ -89,7 +89,7 @@ The experiment was set up so that 4 pea plants were grown together in cups. This
  \begin{figure}[h!]
  	\caption{Blocking arrangement of the peas}
  	\centering
-	\includegraphics[width = 7cm]{pea_locations.png}
+	\includegraphics[width = 7cm]{blocks.png}
 \end{figure}
 
 
