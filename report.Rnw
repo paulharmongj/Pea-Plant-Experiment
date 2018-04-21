@@ -15,7 +15,7 @@ pea$Block <- factor(pea$Block)
 
 
 %%
-\documentclass[preprint,12pt]{elsarticle}
+\documentclass[1p,12pt]{elsarticle}
 
 %% Use the option review to obtain double line spacing
 
@@ -111,6 +111,9 @@ Figure X shows the setup of the experiment at planting. Pea plants were subject 
  	\centering
 	\includegraphics[width = 7cm]{figure/setup.JPG}
 \end{figure}
+
+Prior to the start of the study, power calculations were run using values obtained from previous research.  We based our calculations on a simulation study in which true treatment effects were estimated to be 5 mm between each of the treatment groups. Based on the study, in the presence of little block-to-block and cup-to-cup variability, we needed at least 2 replications per treatment, which we greatly exceeded in the actual study. 
+
 
 \subsection{Data}
 
