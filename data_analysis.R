@@ -44,6 +44,7 @@ title("Heights by Treatment Combinations")
 #some summary statistics
 tapply(pea$Height, interaction(pea$TrtCoke,pea$PF), mean)
 tapply(pea$Height, interaction(pea$TrtCoke,pea$PF), sd)
+
 tapply(pea$Height, interaction(pea$TrtCoke,pea$PF), summary)
 
 #this treats things at the plant level, so we need different Sums of Squares
@@ -106,7 +107,7 @@ lme.1 <- lme(Height ~ TrtCoke + PF + Block, random = ~1|Cup_Rand, data = pea)
 
 library(multcomp)
 q <- glht(lmer2, linfct = mcp(TrtCoke = "Tukey"))
-cld(q)
+xtable(cld(q))
 
 
 ####WE could instead average over the cups ###
