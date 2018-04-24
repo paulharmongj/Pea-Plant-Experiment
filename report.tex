@@ -55,6 +55,7 @@
 \newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
 
 \usepackage{alltt}
+%\documentclass[article]
 
 %% Use the option review to obtain double line spacing
 
@@ -66,6 +67,7 @@
 
 \usepackage{lineno}
 
+\journal{Experimental Design}
 
 
 % \biboptions{}
@@ -84,8 +86,13 @@
 
 \begin{abstract}
 %% Text of abstract
-In order to assess the effects of Diet Coke on the short term growth behavior of plants, we grew pea plants and treated them with different combinations of watering type and plant food. Alaska pea plants were grown in cups treated with a watering regimen consisting of either Diet Coke, diluted Diet Coke, or water. They were also randomized to a combination of either getting plant food upon being planted or not receiving any. A mixed-model was fit to analyze the fixed effects of the two factors while accounting for differences in variation due to the cups and row-blocks in the Randomized block design. Results indicate that pea plants treated with some form of diet coke grew taller than those that were treated with water, regardless of whether or not they received plant food. 
+\textbf{
+In order to assess the effects of Diet Coke on the short term growth behavior of plants, we grew pea plants and treated them with different combinations of watering type and plant food. Alaska pea plants were grown in cups treated with a watering regimen consisting of either Diet Coke, diluted Diet Coke, or water. They were also randomized to a combination of either getting plant food upon being planted or not receiving any. A mixed-model was fit to analyze the fixed effects of the two factors while accounting for differences in variation due to the cups and row-blocks in the Randomized block design. Results indicate that pea plants treated with some form of diet coke grew taller than those that were treated with water, regardless of whether or not they received plant food.
+}
 \end{abstract}
+\begin{keyword}
+Science \sep Pea Research \sep Experimental Design \sep Diet Coke
+\end{keyword}
 
 
 \end{frontmatter}
@@ -98,14 +105,15 @@ In order to assess the effects of Diet Coke on the short term growth behavior of
 %% main text
 \section{Introduction and Research Questions}
 
-The effect of aspartame, sodium, and other chemical consumption on health outcomes of diet soft-drink consumers has motivated many recent academic studies and garnered attention in the mainstream media. Diet Coke (as well as other brands of diet soda) has been shown to be associated with changes in metabolic behavior and other physiological responses (Veldhuizen, 2017). It has also been linked in longitudinal observational studies to increased risk of stroke. Perhaps unsurprisingly, according to survey analysis performed by Nielsen, diet soda consumption is on the decline, perhaps due to the growing perception that Diet Coke simply is not a healthy choice . But is Diet Coke that bad for consumers? After all, Diet Coke is mostly water (Levitt, 2007). Most scientific work focuses on long-term impacts of soft drink consumption on health via longitudinal studies; however, very little dedicated experimentation has been done to test either its short or long term effects on either humans or plant life. 
+The effect of aspartame, sodium, and other chemical consumption on health outcomes of diet soft-drink consumers has motivated many recent academic studies and garnered attention in the mainstream media. Diet Coke (as well as other brands of diet soda) has been shown to be associated with changes in metabolic behavior and other physiological responses  in people(Veldhuizen, 2017). It has also been linked in longitudinal observational studies to increased risk of stroke. This negative press has impacted consumer behavior; according to survey analysis performed by Nielsen, diet soda consumption is on the decline, perhaps due to the growing perception that Diet Coke simply is not a healthy choice.
 
-The purpose of our experiment, then, is to analyze the short-term effects of Diet Coke on plant growth when used as a substitute for water. The research question addressed by this study is as follows: Does Diet Coke harm the ability of a plant to grow? We posit that since Diet Coke contains ingredients that may be harmful, including aspartame, plants treated exclusively with it instead of water will grow at
-a diminished rate relative to those treated with actual water. Based on this, the treatment of interest is whether the plant is watered with pure tap water or a mixture involving Diet Coke. The treatments of this factor are:
+But is Diet Coke that bad for consumers? After all, Diet Coke is mostly water (Levitt, 2007). Further, most of the work referenced here relies on observational studies that may not control for confounding factors.  Most scientific work focuses on long-term impacts of soft drink consumption on health via large, longitudinal analyses; however, very little dedicated experimentation has been done to test either the short or long term effects of Diet Coke consumption on people (or anything for that matter). 
+
+This study is posed as the first in a line of potential experiments relating to Diet Coke consumption; rather than studying the effect of Diet Coke on humans, we start by studying the effect of Diet Coke on plant life. The purpose of our experiment is to analyze the short-term effects of Diet Coke on plant growth when used as a substitute for water, controlling for other factors that are left to vary in an observational setting. The research question addressed by this study is as follows: \textbf{Does Diet Coke harm the ability of a plant to grow?} We posit that since Diet Coke contains ingredients that may be harmful, including aspartame, plants treated exclusively with it instead of water will grow at a diminished rate relative to those treated with pure water. Based on this, the treatment of interest is whether the plant is watered with pure tap water or a mixture involving Diet Coke.  The treatments of this factor are:
 
 \begin{itemize}
 \item Diet Coke
-\item 22 percent Diet Coke Dilution
+\item Diet Coke Dilution 
 \item Tap water (Control)
 \end{itemize}
 
@@ -116,14 +124,16 @@ We are also interested in the effect of plant food,  especially whether or not t
 \item No plant food
 \end{itemize}
 
-Previous research has been done on the effect of different types of watering substances on pea plant growth. Work done by Roland et al (2013) found significant differences in pea plant heights when comparing Vitamin Water treatments to an untreated watering regime. Similarly, work by Slutzky et al (2003) found significant differences between pea-plant heights after treatment with unspecified Diet soda, Water, ibuprofen, and sparkling water regimes. However, little appears to have been done to specifically assess the effect of Diet Coke specifically, nor has there been much progress on the assessment of an interaction between presence of plant food and watering type.   
+Previous research has been done on the effect of different types of watering substances on pea plant growth. Work done by Roland et al (2013) found significant differences in pea plant heights when comparing Vitamin Water treatments to an untreated watering regime. Similarly, work by Slutzky et al (2003) found significant differences between pea-plant heights after treatment with unspecified diet soda, water, ibuprofen, and sparkling water regimes. However, little appears to have been done to specifically assess the effect of Diet Coke specifically, nor has there been much progress on the assessment of an interaction between presence of plant food and watering type.   
 
 
 
 \section{Methods}
 \subsection{Experimental Design}
 
-The experiment was set up so that 4 pea plants were grown together in cups. This way, we avoided cross contamination of watering treatments because all plants within a single cup received the same treatement.  In order to discourage pea roots from growing into each other, peas were planted at each of the cardinal directios in the cups as denoted in Figure X. 
+All treatments and materials were purchased at the Bozeman Wal Mart. Diet Coke was obtained from 1 liter bottles and the Diet Coke dilution was created by mixing 400 ml of Diet Coke with 1.5 liters of water, giving a 22 percent Diet Coke solution. The tap water came from an unfiltered sink supplied by the Four Corners, MT Water and Sewer District. Expert Garder brand plant food was utilized, and all plants were planted in Jiffy Seed Starting mix.  The experimental units were Alaska pea plant seeds produced by the Ferry Morse company. 
+
+The experiment was set up so that 4 pea plants were grown together in cups. This way, we avoided cross contamination of watering treatments because all plants within a single cup received the same treatment.  In order to discourage pea roots from growing into each other, peas were planted at each of the cardinal directions in the cups as denoted in Figure X. 
  \begin{figure}[h!]
  	\caption{Blocking arrangement of the peas}
  	\centering
@@ -133,16 +143,9 @@ The experiment was set up so that 4 pea plants were grown together in cups. This
 
 6 cups were arranged in row-blocks in a cardboard box that was placed on a table next to a west-facing window. The plants received between 5 and 7 hours of sunlight daily.  Peas were watered once daily in the evening; each treatment consisted of between 20 and 25 ml of either Diet Coke, diluted Diet Coke, or tap water. Per instructions, plant food was administered at planting only via addition to and mixing in the soil.  
 
-Figure X shows the experimental design. Treatments (imposed to each cup) were randomized within each block and up to four pea plants could germinate within a single cup. Ideally, this would have led to 96 pea plants; however, some did not germinate. This is discussed further in the germination section of this paper. 
+Figure 1 shows the experimental design. Treatments (imposed to each cup) were randomized within each block and up to four pea plants could germinate within a single cup. Ideally, this would have led to 96 pea plants; however, some did not germinate. This is discussed further in the germination section of this paper. 
 
- \begin{figure}[h!]
- 	\caption{Blocking arrangement of the peas}
- 	\centering
-	\includegraphics[width = 7cm]{figure/blocking_arrangment.png}
-\end{figure}
-
-
-Figure X shows the setup of the experiment at planting. Pea plants were subject to between 5 and 7 hours of sunlight per day; however it is possible that plants nearer the window could have received more intense sunlight than those farther from the window. This was the reason for consideration of row-blocks. This experiment utilized Jiffy brand plant starting mix for soil, Expert plant food, and Ferry-Morse alaska pea seeds, all purchased from the Bozeman Wal Mart. 
+Figure 2 shows the setup of the experiment at planting. Pea plants were subject to between 5 and 7 hours of sunlight per day; however it is possible that plants nearer the window could have received more intense sunlight than those farther from the window. This was the reason for consideration of row-blocks. 
 
  \begin{figure}[h!]
  	\caption{Setup of the initial experiment}
@@ -162,7 +165,7 @@ In order to analyze these data, we proposed an analysis that considers the effec
 Y_{ijkl} = \mu + \alpha_i + \beta_j + Block_j + \alpha\beta_{ij}+ Cup_{kj} + \epsilon_{ijkl}
 \end{equation}
 \\
-In the model, the response Y refers to the mean height, in millimeters, of the lth pea plant in the kth cup in the jth block. The overall mean height is $\mu$, the effect of Diet Coke type is $\alpha$, and the effect of fertilizer is $\beta$. We also consider their interaction. The random effects of Cup and Block are also considered in the model, and we make the assumptions that independent random errors are distributed as such: $\epsilon \sim N(0,\sigma^2_{error})$, $Block \sim N(0,\sigma^2_{block})$, and $Cup \sim N(0,\sigma^2_{cup})$. 
+In the model, the response Y refers to the mean height, in millimeters, of the lth pea plant in the kth cup in the jth block. The overall mean height is $\mu$, the effect of Diet Coke type is $\alpha$, and the effect of fertilizer is $\beta$. We also consider their interaction $\alpha\beta$. The random effects of Cup and Block are also considered in the model, and we make the assumptions that independent random errors are distributed as such: $\epsilon \sim N(0,\sigma^2_{error})$, $Block \sim N(0,\sigma^2_{block})$, and $Cup \sim N(0,\sigma^2_{cup})$. 
 
 
 
@@ -171,7 +174,7 @@ In the model, the response Y refers to the mean height, in millimeters, of the l
 \section{Results and Analysis}
 \subsection{Experiment Results}
 
-The experiment started on March 21, when plants were initially planted. A 24 hour regularization period occurred before the treatments were imposed. Watering regimes were imposed for the two week period before plant heights were measured on April 5th. Figure X shows the original experimental set up. Figure X shows the plant growth after a week, and then finally Figure X shows the plant growth after the two week period of treatment.  On the whole, the plants responeded well to the treatments; plants grew more than anticipated during the study period. 
+The experiment started on March 21, when plants were initially planted. A 24 hour regularization period occurred before the treatments were imposed. Watering regimes were imposed for the two week period before plant heights were measured on April 5th. Figure 3 shows the original experimental set up in the left panel. The middle panel shows the plant growth after a week, and then finally the right panel shows the plant growth after the two week period of treatment.  On the whole, the plants responded well to the treatments; plants grew more than anticipated during the study period. 
  \begin{figure}[h!]
  	\caption{Pea plants at planting, after one week, and at experiment end}
  	\centering
@@ -180,18 +183,19 @@ The experiment started on March 21, when plants were initially planted. A 24 hou
 	\includegraphics[width = 4cm]{figure/2weeks.JPG}
 \end{figure}
 
-Initial exploratory data analysis indicated fairly substantial differences in pea plant heights by treatment group. Overall, the mean plant height was 20.6 with a median height of 23 mm. This is slightly skewed left because of the 14 plants that did not germinate (these had a height of 0). When comparing by treatment combination, as is shown in the beanplot (Kampstra, 2008), we can compare distributions of plant heights by each treatment. The wide lines are the median heights for each group and the narrow lines refer to single observations. The median heights for the water-based groups appear to be lower than for either of the Diet-Coke based treatments. However, varaibilty in plant heights appears to be about the same for all groups. 
+Initial exploratory data analysis indicated fairly substantial differences in pea plant heights by treatment group. Overall, the mean plant height was 20.6 with a median height of 23 mm. This is slightly skewed left because of the 14 plants that did not germinate (these had a height of 0). When comparing by treatment combination, as Figure 4 shows in the beanplot (Kampstra, 2008), we can compare distributions of plant heights by each treatment. The wide lines are the median heights for each group and the narrow lines refer to single observations. The median heights for the water-based groups appear to be lower than for either of the Diet-Coke based treatments. However, variability in plant heights appears to be about the same for all groups, as is givenin Table 1. 
 
 \begin{table}[ht]
 \centering
 \begin{tabular}{rrrrr}
   \hline
- & Min & Mean & Median & Max \\ 
+ & Min & Mean & Median & Max & SD \\ 
   \hline
- & 0 & 20.6 & 23.0 & 40.0 \\ 
+ & 0 & 20.6 & 23.0 & 40.0 & 9.65\\ 
   
    \hline
 \end{tabular}
+\caption{Summary of plant heights}
 \end{table}
 
 \begin{knitrout}
@@ -202,7 +206,7 @@ Initial exploratory data analysis indicated fairly substantial differences in pe
 
 \end{knitrout}
 
-There did not appear to be major differences in plant height by block, as shown in Figure X. This was expected as we did not anticipate major differences in plant conditions by block; however, we wanted the experiment to be designed in a way that was robust to such differences if they existed. 
+There did not appear to be major differences in plant height by block, as shown in Figure 5. This was expected as we did not anticipate major differences in plant conditions by block; however, we wanted the experiment to be designed in a way that was robust to such differences if they existed. 
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
@@ -214,7 +218,7 @@ There did not appear to be major differences in plant height by block, as shown 
 
 
 \subsection{Germination Rates}
-Before we could do any statistical analysis of the pea plants, we had to determine that the treatment was not related to the germination probability for a given plant. Overall, 14 of the 82 (15 percent) of the pea plants failed to germinate. Figure X below shows the germination rates by each treament combination - there does not appear to be a large, systematic difference between the treatment combinations in terms of germination rates. 
+Before we could do any statistical analysis of the pea plants, we had to determine that the treatment was not related to the germination probability for a given plant. Overall, 14 of the 82 (15 percent) of the pea plants failed to germinate. Figure 6 below shows the germination rates by each treament combination - there does not appear to be a large, systematic difference between the treatment combinations in terms of germination rates. 
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
@@ -230,7 +234,7 @@ A Chi-squared test of independence between the treatment groups and whether or n
 
 \subsection{Regression Results}
 
-All regressions and ANOVA were run using the lme4 package (Bates et al., 2015) and 'car' package (Fox, 2011). The results of the ANOVA are given below. Type II Sums of Squares were compared since the sample sizes within each treatment group were not even. The ANOVA table is given below for the fixed effects. The results are clear; the majority of variation in plant heights is driven by the watering treatment rather than by the presence of plant food.  The model finds strong evidence of height differences by Diet Coke treatment, based on a Wald chi-squared test with test statistic 31.42 on 2 degrees of freedom (with associated p-value < 0.0001). There was not strong evidence of a difference in plant heights by presence/absence of plant food nor was there evidence that the effect of watering substance differed depending on plant food treatment. 
+All regressions and ANOVA were run using the lme4 package (Bates et al., 2015) and 'car' package (Fox, 2011). The results of the ANOVA are given below. Type II Sums of Squares were compared since the sample sizes within each treatment group were not even. The ANOVA table is given in Table 2 for the fixed effects. The results are clear; the majority of variation in plant heights is driven by the watering treatment rather than by the presence of plant food.  The model finds strong evidence of height differences by Diet Coke treatment, based on a Wald chi-squared test with test statistic 31.42 on 2 degrees of freedom (with associated p-value < 0.0001). There was not strong evidence of a difference in plant heights by presence/absence of plant food nor was there evidence that the effect of watering substance differed depending on plant food treatment. 
 
 % latex table generated in R 3.4.3 by xtable 1.8-2 package
 % Fri Apr 20 15:40:25 2018
@@ -245,10 +249,11 @@ TrtCoke & 31.43 & 2 & 0.0000 \\
   TrtCoke:PF & 1.40 & 2 & 0.4969 \\ 
    \hline
 \end{tabular}
+\caption{Results of the ANOVA with Type II SS}
 \end{table}
  
 
-We also include effects plots (Fox, 2003) to describe the predicted means with associated uncertainty by treamtent group. The effects plots are included in Figure X. In the left panel, the predicted heights by watering treatment are given for plants that were treated with plant food. The right panel shows the predicted plant heights for those that were untreated by plant food. In both groups, the predicted heights for plants treated either with Diet Coke or diluted Diet Coke are at least 10 mm larger than for those treated with water. Even accounting for uncertainty in estimates, the confidence intervals for the Diet Coke treated plants are larger than for those that were treated with water only.  
+We also include effects plots (Fox, 2003) to describe the predicted means with associated uncertainty by treamtent group. The effects plots are included in Figure 7. In the left panel, the predicted heights by watering treatment are given for plants that were treated with plant food. The right panel shows the predicted plant heights for those that were untreated by plant food. In both groups, the predicted heights for plants treated either with Diet Coke or diluted Diet Coke are at least 10 mm larger than for those treated with water. Even accounting for uncertainty in estimates, the confidence intervals for the Diet Coke treated plants are larger than for those that were treated with water only.  
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
@@ -261,7 +266,7 @@ We also include effects plots (Fox, 2003) to describe the predicted means with a
 
 \subsection{Tukey Pairwise Comparisons}
 
-Tukey Honest Significant Differences were calculated for the pairwise comparisons between the treatment combinations. A compact letter display is given in Table X, with rankings by watering type averaged over the plant food factor. The rankings are such that rank 1 refers to the largest plant heights and rank 2 refers to the smallest plant heights.  The Tukey pairwise comparisons identify the Diet Coke and diluted Diet Coke treatments as having indisttinguishable mean plant heights, and the tap water treatment to be associated with smaller plant heights. 
+Tukey Honest Significant Differences were calculated for the pairwise comparisons between the treatment combinations. A compact letter display is given in Table 3, with rankings by watering type averaged over the plant food factor. The rankings are such that rank 1 refers to the largest plant heights and rank 2 refers to the smallest plant heights.  The Tukey pairwise comparisons identify the Diet Coke and diluted Diet Coke treatments as having indistinguishable mean plant heights, and the tap water treatment to be associated with smaller plant heights. 
 
 % CLD table
 \begin{table}[ht]
@@ -270,10 +275,11 @@ Tukey Honest Significant Differences were calculated for the pairwise comparison
   \hline
  & Diet Coke & Diluted Diet Coke & Water \\ 
   \hline
-Ranking & 1 & 2 & 1 \\ 
+Ranking & A & A & B \\ 
   
    \hline
 \end{tabular}
+\caption{Compact letter display of watering treatments}
 \end{table}
 
 
@@ -282,7 +288,9 @@ Ranking & 1 & 2 & 1 \\
 \subsection{Conclusions}
 This project illuminates some particularly interesting results. When we first started this analysis, we expected that the addition of Diet Coke to the watering regime of the pea plants would either harm or cause no benefit to the pea plants. This does not appear to be the case. Rather, the pea plants that were treated with either pure Diet Coke or Diet Coke dilution tended to grow at a more rapid rate than did those treated with just water. 
 
-This may be reflective of the hardiness of alaskan pea plants in general. Or, it may be that the additional ingredients in the Diet Coke did not substantially harm the pea plants in the short term. 
+This may be reflective of the hardiness of alaskan pea plants in general. Or, it may simply be that the additional ingredients in the Diet Coke did not substantially harm the pea plants in the short term and it made a good substitute for water.
+
+Much of these results should be intepreted in the short-term context of the two-week research period. The pea plants grew much more rapidly than we initially expected, and towards the end of the study period, they began to fall down as they were no longer able to support themselves. This behavior is referred to as 'lodging', and it can be driven by genetic differences as well as seed treatments like the ones we imposed in our experiment(Smitchger, 2018). Although we did not assess this in this study, it is possible that lodging severity may have differed by treatments - this could be something to consider in future research. In some sense, the results of this experiment illuminate the possibility that plant height may be a poor proxy for overall plant health because peas that grow too tall and cannot support themselves will likely die in the long-term. 
 
 \subsection{Limitations of the Study}
 
@@ -291,7 +299,7 @@ The alaska pea plants obtained from the study were purchased at Wal Mart and cam
 
 
 \subsection{Future Work}
-Pea plants are notoriously hardy. It may be that these plants were more resistant to the Diet Coke than other legumes or, for instance, annual flowers might be. Future research should consist of replicating this experiment with other types of plants.  Much of what motivated this study was the alarming amount of observational evidence that excessive consumption of Diet Coke has long-term health impacts on humans. Because pea plants make a poor proxy for human beings, eventually experiments like this should be conducted on people to compare health outcomes of Diet Coke drinkers to non-Diet Coke drinkers. The longitudinal studies that have already been done have laid the groundwork for identification of a relationship between health outcomes and soda consumption; however, to make causal inference between them, investigation via controlled experiments is sorely needed. 
+Pea plants are notoriously hardy. It may be that these plants were more resistant to the Diet Coke than other legumes or, for instance, annual flowers might be. Future research should consist of replicating this experiment with other types of plants.  Much of what motivated this study was the alarming amount of observational evidence that excessive consumption of Diet Coke has long-term health impacts on humans. Because pea plants make a poor proxy for human beings, eventually experiments like this should be conducted on people to compare health outcomes of Diet Coke drinkers to non-Diet Coke drinkers. This experiment provides a good starting place for such research.  The longitudinal studies that have already been done have laid the groundwork for identification of a relationship between health outcomes and soda consumption; however, to make causal inference between them, investigation via controlled experiments is sorely needed. 
 
 
 \newpage

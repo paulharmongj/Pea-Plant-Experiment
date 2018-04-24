@@ -16,8 +16,8 @@ pea$Block <- factor(pea$Block)
 # Reformats the data set "pea" such that there are 4 blocking factors and an individual cup factor for the replicates
 Block <- as.factor(rep(c(1, 2, 3, 4), each = 24))
 Cup <- as.factor(rep(1:24, each = 4))
-pea2 <- cbind(block, cup, pea[, 3:6])
-# Create one random effect combination of block and cup
+pea2 <- cbind(Block, Cup, pea[, 3:6])
+# Create one random efCfect combination of block and cup
 RE <- interaction(Block, Cup, sep = ":")
 pea2$RE <- RE
 
@@ -75,10 +75,9 @@ In order to assess the effects of Diet Coke on the short term growth behavior of
 %% main text
 \section{Introduction and Research Questions}
 
-The effect of aspartame, sodium, and other chemical consumption on health outcomes of diet soft-drink consumers has motivated many recent academic studies and garnered attention in the mainstream media. Diet Coke (as well as other brands of diet soda) has been shown to be associated with changes in metabolic behavior and other physiological responses (Veldhuizen, 2017). It has also been linked in longitudinal observational studies to increased risk of stroke. Perhaps unsurprisingly, according to survey analysis performed by Nielsen, diet soda consumption is on the decline, perhaps due to the growing perception that Diet Coke simply is not a healthy choice . But is Diet Coke that bad for consumers? After all, Diet Coke is mostly water (Levitt, 2007). Most scientific work focuses on long-term impacts of soft drink consumption on health via longitudinal studies; however, very little dedicated experimentation has been done to test either its short or long term effects on either humans or plant life. 
+The effect of aspartame, sodium, and other chemical consumption on health outcomes of diet soft-drink consumers has motivated many recent academic studies and garnered attention in the mainstream media. Diet Coke (as well as other brands of diet soda) has been shown to be associated with changes in metabolic behavior and other physiological responses (Veldhuizen, 2017). It has also been linked in longitudinal observational studies to increased risk of stroke. Perhaps unsurprisingly, according to survey analysis performed by Nielsen, diet soda consumption is on the decline, perhaps due to the growing perception that Diet Coke simply is not a healthy choice . But is Diet Coke that bad for consumers? After all, Diet Coke is mostly water (Levitt, 2007). Most scientific work focuses on long-term impacts of soft drink consumption on health via longitudinal studies; however, very little dedicated experimentation has been done to test either the short or long term effects of Diet Coke consumption. 
 
-The purpose of our experiment, then, is to analyze the short-term effects of Diet Coke on plant growth when used as a substitute for water. The research question addressed by this study is as follows: Does Diet Coke harm the ability of a plant to grow? We posit that since Diet Coke contains ingredients that may be harmful, including aspartame, plants treated exclusively with it instead of water will grow at
-a diminished rate relative to those treated with actual water. Based on this, the treatment of interest is whether the plant is watered with pure tap water or a mixture involving Diet Coke. The treatments of this factor are:
+Rather than studying the effect of Diet Coke on humans, we start by studying the effect of Diet Coke on plant life. The purpose of our experiment is to analyze the short-term effects of Diet Coke on plant growth when used as a substitute for water. The research question addressed by this study is as follows: Does Diet Coke harm the ability of a plant to grow? We posit that since Diet Coke contains ingredients that may be harmful, including aspartame, plants treated exclusively with it instead of water will grow at a diminished rate relative to those treated with actual water. Based on this, the treatment of interest is whether the plant is watered with pure tap water or a mixture involving Diet Coke. The treatments of this factor are:
 
 \begin{itemize}
 \item Diet Coke
