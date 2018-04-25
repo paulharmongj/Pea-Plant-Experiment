@@ -149,8 +149,12 @@ lsmeansLT(lmer3) #these are the same as what you'd find in the lsmeans
 
 library()
 
-
-
+# Tukey HSD
+Combo <- interaction(pea$TrtCoke, pea$PF, sep = ":")
+pea1 <- pea
+pea1$Combo <- Combo
+aov_tukey <- aov(Height ~ Combo, data = pea1)
+TukeyHSD(aov_tukey)
 
 
 
