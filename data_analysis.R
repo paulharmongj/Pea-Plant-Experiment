@@ -156,7 +156,8 @@ Combo <- interaction(pea$TrtCoke, pea$PF, sep = ":")
 pea1 <- pea
 pea1$Combo <- Combo
 aov_tukey <- aov(Height ~ Combo, data = pea1)
-TukeyHSD(aov_tukey)
+par(mar = c(3,10,3,3))
+plot(TukeyHSD(aov_tukey), col = ifelse(TukeyHSD(aov_tukey)$Combo[,'p adj'] < 0.05, 'red','black'), las = 2)
 
 
 

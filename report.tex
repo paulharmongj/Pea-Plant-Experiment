@@ -156,6 +156,12 @@ Figure 2 shows the setup of the experiment at planting. Pea plants were subject 
 
 Prior to the start of the study, power calculations were run using values obtained from previous research.  We based our calculations on a simulation study in which true treatment effects were estimated to be 5 mm between each of the treatment groups. Based on the study, in the presence of little block-to-block and cup-to-cup variability, we needed at least 2 replications per treatment, which we greatly exceeded in the actual study. 
 
+ \begin{figure}[h!]
+ 	\caption{Setup of the initial experiment}
+ 	\centering
+	\includegraphics[width = 7cm]{figure/setup.JPG}
+\end{figure}
+
 
 \subsection{Statistical Model}
 In order to analyze these data, we proposed an analysis that considers the effects of the covariates, as well as the block and cup effects modeled as random effects. Thus our proposed model is: 
@@ -231,9 +237,27 @@ A Chi-squared test of independence between the treatment groups and whether or n
 
 
 
-\subsection{Regression Results}
+\subsection{Model Selection}
 
-All regressions and ANOVA were run using the lme4 package (Bates et al., 2015) and 'car' package (Fox, 2011). The results of the ANOVA are given below. Type II Sums of Squares were compared since the sample sizes within each treatment group were not even. The ANOVA table is given in Table 2 for the fixed effects. The results are clear; the majority of variation in plant heights is driven by the watering treatment rather than by the presence of plant food.  The model finds strong evidence of height differences by Diet Coke treatment, based on a Wald chi-squared test with test statistic 31.42 on 2 degrees of freedom (with associated p-value < 0.0001). There was not strong evidence of a difference in plant heights by presence/absence of plant food nor was there evidence that the effect of watering substance differed depending on plant food treatment. 
+All regressions and ANOVA were run using the lme4 package (Bates et al., 2015) and 'car' package (Fox, 2011).  Although we considered fitting a lower-ordered model based on our results, we determined that the interaction model was theoretically the most appropriate model and thus kept two terms that were not deemed to be statistically significant. 
+
+A check of the assumptions for the ANOVA model was performed. Residual plots were used to assess the constant variance of the residuals across treatment groups as well as the presence of possible outliers. A QQ plot was also utilized to assess the normality of the residuals. These two plots are shown in Figure 8. The residual plot shows some slight changes in variability by treatment group; however, it is not substantial. Moreover, while there may be some evidence of slightly light tails in the QQ plot, it looks fairly linear. Given this plot, and the relatively large sample size, we did not find compelling evidence against the assumption of normality. 
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}
+
+{\centering \includegraphics[width=\maxwidth]{figure/assess-1} 
+
+}
+
+
+
+\end{knitrout}
+
+
+\subsection{Model Results}
+
+The results of the ANOVA are given in Table 2. Type II Sums of Squares were compared since the sample sizes within each treatment group were not even.  The results are clear; the majority of variation in plant heights is driven by the watering treatment rather than by the presence of plant food.  The model finds strong evidence of height differences by Diet Coke treatment, based on a Wald chi-squared test with test statistic 31.42 on 2 degrees of freedom (with associated p-value < 0.0001). There was not strong evidence of a difference in plant heights by presence/absence of plant food nor was there evidence that the effect of watering substance differed depending on plant food treatment. 
 
 % latex table generated in R 3.4.3 by xtable 1.8-2 package
 % Fri Apr 20 15:40:25 2018
@@ -252,7 +276,7 @@ TrtCoke & 31.43 & 2 & 0.0000 \\
 \end{table}
  
 
-We also include effects plots (Fox, 2003) to describe the predicted means with associated uncertainty by treamtent group. The effects plots are included in Figure 7. In the left panel, the predicted heights by watering treatment are given for plants that were treated with plant food. The right panel shows the predicted plant heights for those that were untreated by plant food. In both groups, the predicted heights for plants treated either with Diet Coke or diluted Diet Coke are at least 10 mm larger than for those treated with water. Even accounting for uncertainty in estimates, the confidence intervals for the Diet Coke treated plants are larger than for those that were treated with water only.  
+We also include effects plots (Fox, 2003) to describe the predicted means with associated uncertainty by treamtent group. The effects plots are included in Figure 8. In the left panel, the predicted heights by watering treatment are given for plants that were treated with plant food. The right panel shows the predicted plant heights for those that were untreated by plant food. In both groups, the predicted heights for plants treated either with Diet Coke or diluted Diet Coke are at least 10 mm larger than for those treated with water. Even accounting for uncertainty in estimates, the confidence intervals for the Diet Coke treated plants are larger than for those that were treated with water only.  
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
@@ -281,7 +305,7 @@ Ranking & A & A & B \\
 \caption{Compact letter display of watering treatments}
 \end{table}
 
-Finally, the comparison of all treatment combinations is given in Figure 8.  The combinations that are not statistically different from each other are colored black, and the combinations that are statistically significant are colored in red. Based on these combinations, the mean plant heights for peas treated with diluted Diet Coke and plant food differed differed from those treated with plant food and just water. Similarly, the diluted Diet Coke with no plant food combination differs from the water and plant food group. Interestingly, none of the pure Diet Coke combinations differed from those with water or diluted Diet Coke. 
+Finally, the comparison of all treatment combinations is given in Figure 9.  The combinations that are not statistically different from each other are colored black, and the combinations that are statistically significant are colored in red. Based on these combinations, the mean plant heights for peas treated with diluted Diet Coke and plant food differed differed from those treated with plant food and just water. Similarly, the diluted Diet Coke with no plant food combination differs from the water and plant food group. Interestingly, none of the pure Diet Coke combinations differed from those with water or diluted Diet Coke. 
 
 \begin{knitrout}
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{figure}
