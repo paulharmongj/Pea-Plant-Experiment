@@ -107,6 +107,8 @@ lme.1 <- lme(Height ~ TrtCoke + PF + Block, random = ~1|Cup_Rand, data = pea)
 
 library(multcomp)
 q <- glht(lmer2, linfct = mcp(TrtCoke = "Tukey"))
+
+cld(q)
 xtable(cld(q))
 
 
