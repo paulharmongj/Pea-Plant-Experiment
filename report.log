@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.30)  25 APR 2018 10:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.10.30)  25 APR 2018 10:59
 entering extended mode
 **./report.tex
 (report.tex
@@ -283,166 +283,164 @@ G,.JBIG2,.JB2,.eps]
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Overfull \hbox (6.51112pt too wide) in paragraph at lines 87--92
+Overfull \hbox (6.51112pt too wide) in paragraph at lines 88--93
 \OT1/cmr/bx/n/12 with dif-fer-ent com-bi-na-tions of wa-ter-ing type and plant 
 food. Alaska
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 98.
+LaTeX Font Info:    Try loading font information for U+msa on input line 99.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 98.
+LaTeX Font Info:    Try loading font information for U+msb on input line 99.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 115.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 116.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 115.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 116.
  [2]
 <blocks.png, id=14, 189.40762pt x 109.91063pt>
 File: blocks.png Graphic file (type png)
  <use blocks.png>
-Package pdftex.def Info: blocks.png used on input line 140.
+Package pdftex.def Info: blocks.png used on input line 141.
 (pdftex.def)             Requested size: 199.16928pt x 115.57558pt.
  [3 <./blocks.png>] <figure/setup.JPG, id=21, 4047.12pt x 3035.34pt>
 File: figure/setup.JPG Graphic file (type jpg)
  <use figure/setup.JPG>
-Package pdftex.def Info: figure/setup.JPG used on input line 153.
+Package pdftex.def Info: figure/setup.JPG used on input line 154.
 (pdftex.def)             Requested size: 199.16928pt x 149.36748pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--162
+Underfull \hbox (badness 10000) in paragraph at lines 161--163
 
  []
 
 [4 <./figure/setup.JPG>]
-<figure/initial_growth.JPG, id=27, 4047.12pt x 3035.34pt>
+<figure/initial_growth.JPG, id=25, 4047.12pt x 3035.34pt>
 File: figure/initial_growth.JPG Graphic file (type jpg)
 
 <use figure/initial_growth.JPG>
-Package pdftex.def Info: figure/initial_growth.JPG used on input line 179.
+Package pdftex.def Info: figure/initial_growth.JPG used on input line 180.
 (pdftex.def)             Requested size: 113.81102pt x 85.31314pt.
 
-<figure/lategrowth.JPG, id=28, 4047.12pt x 3035.34pt>
+<figure/lategrowth.JPG, id=26, 4047.12pt x 3035.34pt>
 File: figure/lategrowth.JPG Graphic file (type jpg)
 
 <use figure/lategrowth.JPG>
-Package pdftex.def Info: figure/lategrowth.JPG used on input line 180.
+Package pdftex.def Info: figure/lategrowth.JPG used on input line 181.
 (pdftex.def)             Requested size: 113.81102pt x 85.31314pt.
- <figure/2weeks.JPG, id=29, 4047.12pt x 3035.34pt>
+ <figure/2weeks.JPG, id=27, 4047.12pt x 3035.34pt>
 File: figure/2weeks.JPG Graphic file (type jpg)
 
 <use figure/2weeks.JPG>
-Package pdftex.def Info: figure/2weeks.JPG used on input line 181.
+Package pdftex.def Info: figure/2weeks.JPG used on input line 182.
 (pdftex.def)             Requested size: 113.81102pt x 85.31314pt.
  [5 <./figure/initial_growth.JPG> <./figure/lategrowth.JPG> <./figure/2weeks.JP
 G>]
-Package color Info: Redefining color shadecolor on input line 200.
+Package color Info: Redefining color shadecolor on input line 201.
  <figure/eda-1.pdf, id=34, 505.89pt x 289.08pt>
 File: figure/eda-1.pdf Graphic file (type pdf)
 
 <use figure/eda-1.pdf>
-Package pdftex.def Info: figure/eda-1.pdf used on input line 201.
+Package pdftex.def Info: figure/eda-1.pdf used on input line 202.
 (pdftex.def)             Requested size: 384.0pt x 219.434pt.
-Package color Info: Redefining color shadecolor on input line 210.
+Package color Info: Redefining color shadecolor on input line 211.
  <figure/block_bean-1.pdf, id=35, 505.89pt x 289.08pt>
 File: figure/block_bean-1.pdf Graphic file (type pdf)
 
 <use figure/block_bean-1.pdf>
-Package pdftex.def Info: figure/block_bean-1.pdf used on input line 211.
+Package pdftex.def Info: figure/block_bean-1.pdf used on input line 212.
 (pdftex.def)             Requested size: 384.0pt x 219.434pt.
-Package color Info: Redefining color shadecolor on input line 222.
+ [6 <./figure/eda-1.pdf>]
+Package color Info: Redefining color shadecolor on input line 223.
 
-<figure/germination_rates-1.pdf, id=36, 505.89pt x 289.08pt>
+<figure/germination_rates-1.pdf, id=45, 505.89pt x 289.08pt>
 File: figure/germination_rates-1.pdf Graphic file (type pdf)
 
 <use figure/germination_rates-1.pdf>
-Package pdftex.def Info: figure/germination_rates-1.pdf used on input line 223.
+Package pdftex.def Info: figure/germination_rates-1.pdf used on input line 224.
 
 (pdftex.def)             Requested size: 384.0pt x 219.434pt.
- [6 <./figure/eda-1.pdf>] [7 <./figure/block_bean-1.pdf> <./figure/germination_
-rates-1.pdf>]
-Package color Info: Redefining color shadecolor on input line 257.
+ [7 <./figure/block_bean-1.pdf>]
+Package color Info: Redefining color shadecolor on input line 258.
 
-<figure/model_-1.pdf, id=62, 505.89pt x 289.08pt>
+<figure/model_-1.pdf, id=56, 505.89pt x 289.08pt>
 File: figure/model_-1.pdf Graphic file (type pdf)
  <use figure/model_-1.pdf>
-Package pdftex.def Info: figure/model_-1.pdf used on input line 258.
+Package pdftex.def Info: figure/model_-1.pdf used on input line 259.
 (pdftex.def)             Requested size: 384.0pt x 219.434pt.
 
-[8] [9 <./figure/model_-1.pdf>] [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 306--308
+[8 <./figure/germination_rates-1.pdf>] [9 <./figure/model_-1.pdf>]
+Package color Info: Redefining color shadecolor on input line 287.
 
- []
+<figure/pairwise-1.pdf, id=75, 505.89pt x 361.35pt>
+File: figure/pairwise-1.pdf Graphic file (type pdf)
 
-
-Overfull \hbox (228.4872pt too wide) in paragraph at lines 309--311
-\OT1/cmr/m/n/12 Re-gres-sion, Sec-ond Edi-tion. Thou-sand Oaks CA: Sage. URL: h
-ttp://socserv.socsci.mcmaster.ca/jfox/Books/Companion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 309--311
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 309--311
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--314
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--318
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 319--323
-
- []
-
-
+<use figure/pairwise-1.pdf>
+Package pdftex.def Info: figure/pairwise-1.pdf used on input line 289.
+(pdftex.def)             Requested size: 384.0pt x 274.29251pt.
+ [10 <./figure/pairwise-1.pdf>] [11]
 Underfull \hbox (badness 10000) in paragraph at lines 324--326
 
  []
 
 
-Overfull \hbox (5.32887pt too wide) in paragraph at lines 327--329
+Underfull \hbox (badness 10000) in paragraph at lines 327--329
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--341
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--344
+
+ []
+
+
+Overfull \hbox (5.32887pt too wide) in paragraph at lines 345--347
 []\OT1/cmr/m/n/12 Roland, M. (2013). "The Ef-fects of Vi-ta-min Wa-ter on Pea P
 lant Growth".
  []
 
 
-Overfull \hbox (14.87364pt too wide) in paragraph at lines 327--329
+Overfull \hbox (14.87364pt too wide) in paragraph at lines 345--347
 \OT1/cmr/m/n/12 Re-trieved from https://prezi.com/domu2sdet-w5/the-effects-of-v
 itamin-water-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--329
+Underfull \hbox (badness 10000) in paragraph at lines 345--347
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--329
+Underfull \hbox (badness 10000) in paragraph at lines 345--347
 
  []
 
 ! Misplaced alignment tab character &.
-l.330 ...ouglas, C., Hofman, S., Greenstein, E., &
+l.348 ...ouglas, C., Hofman, S., Greenstein, E., &
                                                    Reilly, A. (2003). "Pea P...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -452,51 +450,45 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 
-Overfull \hbox (94.43813pt too wide) in paragraph at lines 330--332
-\OT1/cmr/m/n/12 "Pea Plant Ex-per-i-ments." Re-trieved from http://web.mph.net/
-academic/science/mvural/Life  
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 330--332
+Underfull \hbox (badness 10000) in paragraph at lines 348--350
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 333--335
+Underfull \hbox (badness 10000) in paragraph at lines 351--353
 
  []
 
 
-Overfull \hbox (13.90703pt too wide) in paragraph at lines 336--340
+Overfull \hbox (13.90703pt too wide) in paragraph at lines 354--358
 []\OT1/cmr/m/n/12 Tayeh, N., G. Aubert, M.L. Pilet-Nayel, I. Lejeune-Henaut, T.
 D. Warkentin
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--340
+Underfull \hbox (badness 10000) in paragraph at lines 354--358
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 336--340
+Underfull \hbox (badness 10000) in paragraph at lines 354--358
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 341--344
+Underfull \hbox (badness 10000) in paragraph at lines 359--362
 
  []
 
 [13] (report.aux) ) 
 Here is how much of TeX's memory you used:
- 3266 strings out of 493323
- 44325 string characters out of 3139065
- 113911 words of memory out of 3000000
- 6728 multiletter control sequences out of 15000+200000
+ 3272 strings out of 493323
+ 44456 string characters out of 3139065
+ 113920 words of memory out of 3000000
+ 6733 multiletter control sequences out of 15000+200000
  10274 words of font info for 38 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,9n,30p,967b,244s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,9n,30p,967b,256s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Pr
@@ -507,9 +499,9 @@ s/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
 blic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmti12.pfb>
-Output written on report.pdf (13 pages, 9457656 bytes).
+Output written on report.pdf (13 pages, 9464516 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
+ 127 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
