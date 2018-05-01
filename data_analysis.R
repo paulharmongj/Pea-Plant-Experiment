@@ -92,7 +92,29 @@ summary(lmer2)
 Anova(lmer2, type = "II")
 plot(allEffects(lmer2))
 ##################################this is the model that we chose 
+library(ggplot2)
+library(tibble)
+library(ggthemes)
+Fitted<- fitted(lmer2)
+Residuals <- resid(lmer2, type = "pearson")
 
+diag <- tibble(Fitted, Residuals)
+ggplot(diag) + geom_point(aes(Fitted, Residuals), col = "red") + ggtitle("Residual Plot") + xlab("Fitted Values") + theme_economist_white() 
+
+ggQQ <- function(LM) # argument: a linear model
+{
+  y <- quantile(resid(LM, type = "pearson"), c(0.25, 0.75))
+  x <- qnorm(c(0.25, 0.75))
+  slope <- diff(y)/diff(x)
+  int <- y[1L] - slope * x[1L]
+  p <- ggplot(LM, aes(sample=.resid)) +
+    stat_qq(alpha = 0.5) +
+    geom_abline(slope = slope, intercept = int, color="blue") + ggtitle("QQ Plot") + theme_economist_white()
+  
+  return(p)
+}
+
+ggQQ(lmer2)
 
 #fit main effects additive
 #fit additive model
