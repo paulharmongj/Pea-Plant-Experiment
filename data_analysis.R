@@ -116,6 +116,21 @@ ggQQ <- function(LM) # argument: a linear model
 
 ggQQ(lmer2)
 
+ggRanef <- function(LM) # argument: a linear model
+{
+  y <- ranef(LM)
+  x <- qnorm(c(0.25, 0.75))
+  slope <- diff(y)/diff(x)
+  int <- y[1L] - slope * x[1L]
+  p <- ggplot(LM, aes(sample=.resid)) +
+    stat_qq(alpha = 0.5) +
+    geom_abline(slope = slope, intercept = int, color="blue") + ggtitle("QQ Plot") + theme_economist_white()
+  
+  return(p)
+}
+
+
+
 #fit main effects additive
 #fit additive model
 lmer3 <- lmer(Height ~ TrtCoke + PF + Block + (1|Cup_Rand), data = pea)
